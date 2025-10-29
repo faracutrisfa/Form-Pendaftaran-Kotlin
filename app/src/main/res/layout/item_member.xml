@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="14dp">
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="username atau email"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#1F2937" />
+
+            <TextView
+                android:id="@+id/tvSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jabatan"
+                android:textSize="14sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <!-- PAKAI SALAH SATU SRC DI BAWAH INI -->
+        <!-- Opsi cepat -->
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:alpha="0.6"
+            android:src="@android:drawable/ic_media_next" />
+
+        <!-- Opsi rapi (kalau sudah buat vector asset):
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:alpha="0.6"
+            android:src="@drawable/ic_chevron_right_24" />
+        -->
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

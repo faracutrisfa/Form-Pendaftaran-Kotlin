@@ -46,7 +46,7 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- ScrollView for Content -->
+    <!-- Content -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -130,18 +130,16 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Members List Container -->
-            <LinearLayout
-                android:id="@+id/membersContainer"
+            <!-- RecyclerView untuk daftar anggota -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMembers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:nestedScrollingEnabled="false"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
 
-                <!-- Member cards will be added here dynamically -->
-
-            </LinearLayout>
-
-            <!-- Empty State (will be shown when no data) -->
+            <!-- Empty State -->
             <LinearLayout
                 android:id="@+id/emptyState"
                 android:layout_width="match_parent"
@@ -176,6 +174,7 @@
                     android:textColor="#6B7280"
                     android:textSize="14sp" />
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

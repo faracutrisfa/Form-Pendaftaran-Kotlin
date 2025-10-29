@@ -1,13 +1,13 @@
 package com.example.formpendaftaran
 
-import kotlinx.serialization.Serializable
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
-@Serializable
+@Parcelize
 data class Member(
-    val id: Int? = null,
     val username: String,
     val jabatan: String,
-    val jenis_kelamin: String,
+    val jenisKelamin: String,
     val email: String,
-    val created_at: String? = null
-)
+    val avatarRes: Int
+) : Parcelable

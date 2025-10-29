@@ -56,8 +56,8 @@ class MainActivity : AppCompatActivity() {
     private fun saveMember() {
         // Get input values
         val username = etUsername.text.toString().trim()
-        val jabatan = etJabatan.text.toString().trim()
-        val email = etEmail.text.toString().trim()
+        val jabatan  = etJabatan.text.toString().trim()
+        val email    = etEmail.text.toString().trim()
         val jenisKelamin = if (rbMale.isChecked) "Laki-laki" else "Perempuan"
 
         // Validation
@@ -93,8 +93,9 @@ class MainActivity : AppCompatActivity() {
         val member = Member(
             username = username,
             jabatan = jabatan,
-            jenis_kelamin = jenisKelamin,
-            email = email
+            jenisKelamin = jenisKelamin,
+            email = email,
+            avatarRes = R.mipmap.ic_launcher_round
         )
 
         // Save to Supabase
